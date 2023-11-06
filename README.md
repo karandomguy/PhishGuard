@@ -1,1 +1,1 @@
-# Phishing-Email-Detection
+# Phishing URL & Email Detection
