@@ -37,7 +37,8 @@ PhishGuard is a comprehensive phishing email detection solution designed to enha
 3. Select "Copy selection as Markdown" 
   <img width="1188" alt="Screenshot 2023-11-16 at 12 04 21 AM" src="https://github.com/karandomguy/PhishGuard/assets/92136711/078435b0-988a-439b-8979-964eaf8b6aa1">
 
-4. Run the PhishGuard application through Main.ipynb and paste the content
+4. Run the PhishGuard application, paste the content and hit the "Submit" button.
+   <img width="1440" alt="Screenshot 2023-12-16 at 1 52 38 PM" src="https://github.com/karandomguy/PhishGuard/assets/92136711/a6082b50-ba8c-4ee1-8daa-3acebf512e57">
 
 
 ## Models
@@ -48,6 +49,7 @@ PhishGuard is a comprehensive phishing email detection solution designed to enha
 
 - **Content-based Phishing Detection Model:**
   - **Algorithm:** TF-IDF and SVM pipeline
+
   - **Features:** Analyzes the content of the email
 
 ## Contribution
