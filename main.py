@@ -228,7 +228,7 @@ import joblib
 
 def get_prediction(url):
     
-    model = joblib.load('best_pipeline_url.pkl')
+    model = joblib.load('phishing_emails_models/best_pipeline_tfidf.pkl')
     url_features = feature_extractor(url)
     prediction = model.predict([url_features])
     phishing=url+ ": PHISHING \n"
@@ -245,7 +245,7 @@ def url_predict(url):
 
 import joblib
 
-best_pipeline = joblib.load('best_pipeline_tfidf.pkl')
+best_pipeline = joblib.load('phishing_emails_models/best_pipeline_tfidf.pkl')
 
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -256,7 +256,7 @@ from nltk.tokenize import word_tokenize
 nltk.download('stopwords')
 nltk.download('punkt')
 stop_words = set(stopwords.words('english'))
-email_pipeline = joblib.load('best_pipeline_tfidf.pkl')
+email_pipeline = joblib.load('phishing_emails_models/best_pipeline_tfidf.pkl')
 def preprocess(text):
       words = word_tokenize(text)
       no_stop_words = [word for word in words if word.isalpha() and word.lower() not in stop_words]
