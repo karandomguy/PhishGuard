@@ -228,7 +228,7 @@ import joblib
 
 def get_prediction(url):
     
-    model = joblib.load('phishing_emails_models/best_pipeline_tfidf.pkl')
+    model = joblib.load('best_pipeline_url.pkl')
     url_features = feature_extractor(url)
     prediction = model.predict([url_features])
     phishing=url+ ": PHISHING \n"
@@ -242,10 +242,6 @@ def get_prediction(url):
 def url_predict(url):
   prediction = get_prediction(url)
   return prediction
-
-import joblib
-
-best_pipeline = joblib.load('phishing_emails_models/best_pipeline_tfidf.pkl')
 
 import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
