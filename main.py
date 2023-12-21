@@ -138,10 +138,6 @@ def get_tld_length(url):
 def feature_extractor(url):
     features = []
 
-    # Feature 1: Having IP Address
-    ip_address_feature = having_ip_address(url)
-    features.append(ip_address_feature)
-
     # Feature 2: Abnormal URL
     abnormal_url_feature=abnormal_url(url)
     features.append(abnormal_url_feature)
@@ -154,69 +150,17 @@ def feature_extractor(url):
     www_count_feature = count_www(url)
     features.append(www_count_feature)
 
-    # Feature 5: Count @
-    at_count_feature = count_atrate(url)
-    features.append(at_count_feature)
-
-    # Feature 6: Number of Directories
-    dir_count_feature = no_of_dir(url)
-    features.append(dir_count_feature)
-
-    # Feature 7: Number of Embedded Directories
-    embed_dir_count_feature = no_of_embed(url)
-    features.append(embed_dir_count_feature)
-
-    # Feature 8: Shortening Service
-    shortening_service_feature = shortening_service(url)
-    features.append(shortening_service_feature)
-
-    # Feature 9: Count 'https'
-    count_https_feature = count_https(url)
-    features.append(count_https_feature)
-
     # Feature 10: Count 'http'
     count_http_feature = count_http(url)
     features.append(count_http_feature)
-
-    # Feature 11: Count '%'
-    count_per_feature = count_per(url)
-    features.append(count_per_feature)
-
-    # Feature 12: Count '?'
-    count_ques_feature = count_ques(url)
-    features.append(count_ques_feature)
-
-    # Feature 13: Count '-'
-    count_hyphen_feature = count_hyphen(url)
-    features.append(count_hyphen_feature)
 
     # Feature 14: Count '='
     count_equal_feature = count_equal(url)
     features.append(count_equal_feature)
 
-    # Feature 15: URL Length
-    url_length_feature = url_length(url)
-    features.append(url_length_feature)
-
     # Feature 16: Hostname Length
     hostname_length_feature = hostname_length(url)
     features.append(hostname_length_feature)
-
-    # Feature 17: Suspicious Words
-    suspicious_words_feature = suspicious_words(url)
-    features.append(suspicious_words_feature)
-
-    # Feature 18: Digit Count
-    digit_count_feature = digit_count(url)
-    features.append(digit_count_feature)
-
-    # Feature 19: Letter Count
-    letter_count_feature = letter_count(url)
-    features.append(letter_count_feature)
-
-    # Feature 20: FD Length
-    fd_length_feature = fd_length(url)
-    features.append(fd_length_feature)
 
     # Feature 21: TLD Length
     tld_length_feature = get_tld_length(url)
@@ -244,6 +188,10 @@ def url_predict(url):
   return prediction
 
 import joblib
+
+best_pipeline = joblib.load('best_pipeline_tfidf.pkl')
+
+import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
 from nltk.corpus import stopwords
@@ -252,7 +200,7 @@ from nltk.tokenize import word_tokenize
 nltk.download('stopwords')
 nltk.download('punkt')
 stop_words = set(stopwords.words('english'))
-email_pipeline = joblib.load('phishing_emails_models/best_pipeline_tfidf.pkl')
+email_pipeline = joblib.load('best_pipeline_tfidf.pkl')
 def preprocess(text):
       words = word_tokenize(text)
       no_stop_words = [word for word in words if word.isalpha() and word.lower() not in stop_words]
