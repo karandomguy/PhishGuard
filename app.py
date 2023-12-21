@@ -20,7 +20,7 @@ def set_bg_hack_url():
          f"""
          <style>
          .stApp {{
-             background: url("https://img.freepik.com/free-photo/technology-abstract-background-with-particle-lines_53876-104054.jpg?w=1480&t=st=1702713851~exp=1702714451~hmac=498c94e0253e5a3ea75e7890a5d2baca41ae8131096cb97d7163448a8f06a445");
+             background: url("https://removal.ai/wp-content/uploads/2021/09/black-background-01-pexels.png");
              background-size: cover
          }}
          </style>
@@ -35,6 +35,13 @@ def main():
 
     # Get user input (if needed)
     st.write("PhishGuard is a comprehensive phishing email detection solution designed to enhance email security by employing two distinct models. The first model focuses on detecting phishing URLs, while the second model checks for phishing content within the email body. By combining these approaches, PhishGuard provides a robust defense against phishing attacks in a single, unified solution.")
+    st.subheader("Steps")
+    st.caption("Select the content of your email and right-click")
+    st.caption("1. First, add this chrome extension [Copy as Markdown](https://chromewebstore.google.com/detail/copy-as-markdown/nlaionblcaejecbkcillglodmmfhjhfi?pli=1)")
+    st.caption("2. Select the content of your email and right-click")
+    st.caption("3. Select **Copy selection as Markdown**")
+    st.caption("4. Paste the content and hit the *Submit* button.")
+    
     #st.image('')
     user_input = st.text_area("Enter Email Content")
     text = ''.join(user_input)
