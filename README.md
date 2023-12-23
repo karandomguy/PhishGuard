@@ -11,6 +11,7 @@ PhishGuard is a comprehensive phishing email detection solution designed to enha
 - **Content-based Phishing Detection:** In cases where no URLs are found, PhishGuard directly analyzes the email content using a TF-IDF and SVM pipeline to identify phishing attempts.
 
 - **Unified Solution:** PhishGuard streamlines the phishing detection process by seamlessly integrating both URL and content-based models, ensuring a comprehensive defense against phishing threats.
+- **Web Platform:** You can use the application through our website [phish-guard.streamlit.app](https://phish-guard.streamlit.app/)
 
 ## Installation
 
@@ -37,8 +38,9 @@ PhishGuard is a comprehensive phishing email detection solution designed to enha
 3. Select "Copy selection as Markdown" 
   <img width="1188" alt="Screenshot 2023-11-16 at 12 04 21 AM" src="https://github.com/karandomguy/PhishGuard/assets/92136711/078435b0-988a-439b-8979-964eaf8b6aa1">
 
-4. Run the PhishGuard application, paste the content and hit the "Submit" button.
-   <img width="1440" alt="Screenshot 2023-12-16 at 1 52 38 PM" src="https://github.com/karandomguy/PhishGuard/assets/92136711/a6082b50-ba8c-4ee1-8daa-3acebf512e57">
+4. Run the [PhishGuard application](https://phish-guard.streamlit.app/), paste the content and hit the "Submit" button.
+   <img width="1440" alt="Screenshot 2023-12-24 at 2 51 24 AM" src="https://github.com/karandomguy/PhishGuard/assets/92136711/b2203f39-f513-4ce8-971d-69d4ca0b99fa">
+
 
 
 ## Models
