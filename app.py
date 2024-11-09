@@ -24,20 +24,16 @@ def set_bg_hack_url():
              background-size: cover;
              color: white;
          }}
-         .icon {{
-             font-size: 20px;
-             color: #00acee;
-             margin-right: 10px;
+         h1 {{
+             color: #00acee;  /* Light blue for visibility */
+         }}
+         h2, h3 {{
+             color: #f2f2f2;  /* Light gray for subheadings */
          }}
          .steps {{
              font-size: 18px;
              padding-left: 25px;
-         }}
-         .custom-button {{
-             background-color: #00acee;
-             color: white;
-             border-radius: 10px;
-             padding: 8px 15px;
+             color: white;  /* Ensures visibility of the steps text */
          }}
          </style>
          """,
